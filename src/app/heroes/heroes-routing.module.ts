@@ -3,13 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeroListComponent } from "./hero-list/hero-list.component";
 import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
 
-const heroesroutes: Routes = [
-  { path: 'heroes',  component: HeroListComponent },
-  { path: 'hero/:id', component: HeroDetailComponent }
+const heroesRoutes: Routes = [
+  { path: 'heroes',  component: HeroListComponent, data: { animation: 'heroes' } },
+  { path: 'hero/:id', component: HeroDetailComponent, data: { animation: 'hero' } }
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(heroesroutes)],
+  imports: [RouterModule.forChild(heroesRoutes)],
   exports: [RouterModule]
 })
 export class HeroesRoutingModule { }
